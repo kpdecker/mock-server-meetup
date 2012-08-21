@@ -1,0 +1,10 @@
+{
+  "build-targets": [
+    {"name": "Development", "path": "build/dev", "build-command": "lumbar lumbar.json build/dev"},
+    {"name": "Production", "path": "build/release", "build-command": "lumbar --minimize lumbar.json build/release"}
+  ],
+  "mocks": "mocks",
+  "servers": [
+    "search.twitter.com"
+  ]
+}
