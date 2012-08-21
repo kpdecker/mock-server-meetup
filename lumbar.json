@@ -1,0 +1,77 @@
+{
+  "application": {
+    "name": "Application",
+    "module": "base"
+  },
+  "modules": {
+    "base": {
+      "scripts": [
+        {"src": "js/lib/jquery.js", "global": true},
+        {"src": "js/lib/underscore.js", "global": true},
+        {"src": "js/lib/backbone.js", "global": true},
+        {"src": "js/lib/handlebars.js", "global": true},
+
+        {"src": "js/lib/thorax.js", "global": true},
+        {"src": "js/lib/thorax.event.js", "global": true},
+        {"src": "js/lib/thorax.model.js", "global": true},
+        {"src": "js/lib/thorax.collection.js", "global": true},
+        {"src": "js/lib/thorax.helpers.js", "global": true},
+        {"src": "js/lib/thorax.form.js", "global": true},
+        {"src": "js/lib/thorax.view-controller.js", "global": true},
+        {"src": "js/lib/thorax.loading.js", "global": true},
+        {"src": "js/lib/script.js", "global": true},
+        {"src": "js/lib/lumbar-loader.js"},
+        {"src": "js/lib/lumbar-loader-events.js"},
+        {"src": "js/lib/lumbar-loader-standard.js"},
+        {"src": "js/lib/lumbar-loader-backbone.js"},
+        {"src": "js/lib/thorax.lumbar.js"},
+
+        {"src": "js/init.js"},
+
+        {"module-map": true}
+      ],
+      "styles": [
+        {"src": "styles/bootstrap.css"},
+        {"src": "styles/base.styl"}
+      ],
+      "static": [
+        {"src": "static/index.html", "dest": "index.html"}
+      ]
+    },
+    "home": {
+      "routes": {
+        "": "index"
+      },
+      "scripts": [
+        {"src": "js/models/tweet.js"},
+        {"src": "js/collections/search-results.js"},
+        {"src": "js/views/home.js"},
+        {"src": "js/routers/home.js"}
+      ],
+      "styles": [
+        {"src": "styles/home.styl"}
+      ]
+    }
+  },
+  "templates": {
+    "template": "Application.template('{{{name}}}', '{{{data}}}');",
+    "js/init.js": [
+      "templates/application.handlebars"
+    ],
+    "js/views/home.js": [
+      "templates/home.handlebars",
+      "templates/home-item.handlebars"
+    ]
+  },
+  "styles": {
+    "pixelDensity": {
+      "web": [ 1, 2 ]
+    },
+    "includes": [
+      "nib"
+    ]
+  },
+  "scope": {
+    "template": "templates/module.handlebars"
+  }
+}
