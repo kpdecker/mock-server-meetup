@@ -247,7 +247,7 @@
         if (!itemTemplate) {
           throw new Error('collection helper in View: ' + (this.parent.name || this.parent.cid) + ' requires an item template.');
         }
-        return this.renderTemplate(itemTemplate, (this.itemContext && this.itemContext(model, i)) || model.attributes);
+        return this.renderTemplate(itemTemplate, (this.parent.itemContext && this.parent.itemContext(model, i)) || model.attributes);
       }
     },
     appendEmpty: function() {
