@@ -1,0 +1,16 @@
+{
+  "name": "mock-server-meetup",
+  "description": "Your friendly mock server. In action.",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kpdecker/mock-server-meetup.git"
+  },
+  "engines": {
+    "node": "~0.4.5"
+  },
+  "dependencies": {
+      "lumbar": "~1.0"
+  }
+}
